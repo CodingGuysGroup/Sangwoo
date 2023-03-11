@@ -110,6 +110,10 @@ class Solution:
         Node.right=self.constructMaximumBinaryTree(nums[Idx+1:]) # 오른쪽 서브트리를 구성하기 위해 리스트 슬라이싱을 사용하여 재귀 사용
         return Node #최대 이진 트리를 완성시킨 후 노드 리턴
 
-
 ```
+
+### `Runtime and Memory`
+
+![image](https://user-images.githubusercontent.com/106041072/224474804-54393b93-73b2-4fec-a339-2f1eb6d3ebc2.png)
+
 
