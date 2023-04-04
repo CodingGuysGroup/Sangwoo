@@ -7,7 +7,7 @@ Given a sorted integer array arr, two integers k and x, return the k closest int
 An integer a is closer to x than an integer b if:
 - |a - x| < |b - x|, or
 - |a - x| == |b - x| and a < b
-- 
+
 #### Korean
 
 정렬된 정수 배열 배열이 주어지면 두 정수 k와 x가 주어지면 k개의 가장 가까운 정수를 배열의 x로 반환합니다. 결과도 오름차순으로 정렬해야 합니다.
