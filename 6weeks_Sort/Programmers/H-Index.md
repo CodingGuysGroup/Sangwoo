@@ -54,6 +54,20 @@ def solution(citations):
 
 ```
 
+#### 다른 풀이 - 참조
+```
+def solution(citations):
+    citations.sort(reverse=True) # ex) [3,0,3,6,1,5] => [6,5,3,3,1,0]
+    #list(enumerate(citations, start=1)) => [(1,6),(2,5),(3,3),(4,3),(5,1),(6,0)]
+    #밑에 그래프를 보면 인덱스가 증가함에 따라 인용횟수는 감소하는 것을 알 수 있음 -> 교차하는 지점이 정답
+    #교차하는 부분을 파악하기 위해 각 튜플에서 최대값은 버리고 최솟값만 살림
+    #list(map(min,enumerate(citations, start=1))) => [1,2,3,3,1,0]
+    # max 함수 처리를 하면 교차 지점의 최대를 구할 수 있음 [1,2,3,3,1,0]-> 3 
+    answer = max(map(min, enumerate(citations, start=1)))
+    return answer
+```
+![image](https://user-images.githubusercontent.com/106041072/235316906-f48418d2-f335-4036-b8fa-c6012335a564.png)
+
 ### `Runtime and Memory`
 
 ![image](https://user-images.githubusercontent.com/106041072/235314102-3b0280f7-35e1-4b80-8866-29fbaa7a15b5.png)
